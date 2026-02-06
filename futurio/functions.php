@@ -416,7 +416,7 @@ if ( !function_exists( 'futurio_excerpt_length' ) ) :
 	 * Excerpt limit.
 	 */
 	function futurio_excerpt_length( $length ) {
-		if ( is_home() ) { 
+		if ( is_home() || (is_archive() && get_theme_mod('custom_blog_feed', '') == '' && !futurio_check_elementor()) ) { 
 			return get_theme_mod( 'blog_archive_excerpt', '35' ); 
 		} else { 
 			return $length; 
