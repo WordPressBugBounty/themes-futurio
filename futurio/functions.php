@@ -2,7 +2,8 @@
 /**
  * The current version of the theme.
  */
-define( 'FUTURIO_VERSION', '1.5.4' );
+$the_theme = wp_get_theme();
+define('FUTURIO_VERSION', $the_theme->get( 'Version' ));
 
 add_action( 'after_setup_theme', 'futurio_setup' );
 
@@ -14,7 +15,7 @@ if ( !function_exists( 'futurio_setup' ) ) :
 	function futurio_setup() {
 
 		// Theme lang.
-		load_theme_textdomain( 'futurio', get_template_directory() . '/languages' );
+		load_theme_textdomain('futurio', get_template_directory() . '/languages');
 
 		// Add Title Tag Support.
 		add_theme_support( 'title-tag' );
@@ -191,10 +192,20 @@ require_once( trailingslashit( get_template_directory() ) . 'lib/wp_bootstrap_na
  */
 require_once( trailingslashit( get_template_directory() ) . 'lib/dashboard.php' );
 
+
 /**
- * Recommend plugin
+ * Customizer options
  */
-require_once( trailingslashit( get_template_directory() ) . 'lib/customizer-plugin-recommend.php' );
+if (!function_exists('futurio_customizer')) {
+
+    function futurio_customizer() {
+	
+		require_once( trailingslashit( get_template_directory() ) . 'lib/customizer-plugin-recommend.php' );
+    
+	}
+	add_action( 'after_setup_theme', 'futurio_customizer' );
+	
+}
 
 if ( !function_exists( 'futurio_is_extra_activated' ) ) {
 

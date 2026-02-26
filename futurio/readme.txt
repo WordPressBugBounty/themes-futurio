@@ -3,7 +3,7 @@ Contributors: FuturioWP
 Tags: one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, full-width-template, rtl-language-support, custom-menu, editor-style, featured-images, translation-ready, custom-logo, threaded-comments, footer-widgets, blog, e-commerce
 Requires at least: 4.4
 Tested up to: 6.9
-Stable tag: 1.5.6
+Stable tag: 1.5.7
 Requires PHP: 5.6
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -60,6 +60,9 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 Futurio is distributed under the terms of the GNU GPL (http://www.gnu.org/licenses/gpl-3.0.txt), version 3 or later.
 
 == Changelog ==
+
+= 1.5.7 =
+* Updated theme code
 
 = 1.5.6 =
 * Tested with WP 6.9
